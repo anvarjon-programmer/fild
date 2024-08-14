@@ -18,7 +18,7 @@ export default function Register() {
         username, phone,email,password,password2
       });
       alert('Registration successful!');
-      navigate('/login');
+      navigate('/');
     } catch (error) {
       console.error('Registration failed:', error);
       alert('Registration failed');
