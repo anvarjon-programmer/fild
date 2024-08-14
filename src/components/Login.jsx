@@ -22,11 +22,22 @@ export default function Login() {
   };
 
   return (
-    <form onSubmit={handleLogin}>
-      <h2>Login</h2>
-      <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" required />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
-      <button type="submit">Login</button>
+    <div className="flex items-center justify-center h-screen bg-[#0C182D]">
+      <div className="w-full max-w-md p-8 bg-gray-800 rounded-lg shadow-lg">
+    <form onSubmit={handleLogin} className="flex flex-col gap-4">
+    <h2 className="text-2xl font-bold text-center text-white mb-6">Register</h2>
+      <input  className="px-4 py-2 border border-gray-600 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+       type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" required />
+      <input  className="px-4 py-2 border border-gray-600 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+       type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
+      <button 
+        type="submit" 
+        className="w-full py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition duration-300"
+      >
+        Login``
+      </button>
     </form>
+    </div>
+    </div>
   );
 }
